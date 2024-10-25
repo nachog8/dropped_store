@@ -1,32 +1,34 @@
-"use client";
-import Link from "next/link"
-import { Instagram } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
-import { usePathname } from "next/navigation"
-import Image from "next/image";
+"use client"; // Indica que este componente se ejecuta en el cliente
+import Link from "next/link"; // Importa el componente Link de Next.js
+import { Instagram } from "lucide-react"; // Importa el icono de Instagram
+import { Button } from "@/components/ui/button"; // Importa el componente de botón personalizado
+import { Separator } from "@/components/ui/separator"; // Importa el separador de componentes
+import { usePathname } from "next/navigation"; // Hook para obtener la ruta actual
+import Image from "next/image"; // Importa el componente de imagen optimizada de Next.js
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger,
-  } from "@/components/ui/tooltip"
+} from "@/components/ui/tooltip"; // Importa los componentes de Tooltip
 
+// Componente para mostrar un ícono de pago con tooltip
 const PaymentIcon = ({ children, name }: { children: React.ReactNode; name: string }) => (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger>
-          <div className="bg-white p-1 rounded-md shadow-sm">
-            {children}
-          </div>
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>{name}</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
-  )
+  <TooltipProvider>
+    <Tooltip>
+      <TooltipTrigger>
+        <div className="bg-white p-1 rounded-md shadow-sm">
+          {children}
+        </div>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>{name}</p>
+      </TooltipContent>
+    </Tooltip>
+  </TooltipProvider>
+);
 
+// Componente principal del pie de página
 export default function Footer() {
     const pathname = usePathname();
   return (

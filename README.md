@@ -90,3 +90,5 @@ npm run dev
 ```
 
 > Navegar a la App expuesta en [http://localhost:3000](http://localhost:3000)
+
+## Despliegue demo: https://dropped-store.vercel.app/
